@@ -1,0 +1,51 @@
+{
+  "name": "LIVEVUE Knowledge Base",
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#1D9E75",
+    "light": "#5DCAA5",
+    "dark": "#0F6E56"
+  },
+  "topbarLinks": [
+    {
+      "name": "Contact Support",
+      "url": "mailto:cs@livearf.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "LIVEARf Website",
+    "url": "https://livearf.com"
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction"
+      ]
+    },
+    {
+      "group": "LIVEVUE Setup",
+      "pages": [
+        "livevue/setup-guide",
+        "livevue/artwork-component",
+        "livevue/upload-component"
+      ]
+    },
+    {
+      "group": "Tools & Configuration",
+      "pages": [
+        "livevue/frame-generator",
+        "livevue/settings",
+        "livevue/pricing-plans"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "facebook": "https://www.facebook.com/LIVEb4buy/",
+    "twitter": "https://twitter.com/LIVEb4buy/"
+  }
+}
