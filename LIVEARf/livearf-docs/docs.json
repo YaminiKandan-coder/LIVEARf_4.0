@@ -1,5 +1,6 @@
 {
   "name": "LIVEVUE Knowledge Base",
+  "theme": "mint",
   "logo": {
     "light": "/logo/light.png",
     "dark": "/logo/dark.png"
