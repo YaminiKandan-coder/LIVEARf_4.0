@@ -1,172 +1,183 @@
 ---
 title: "Artwork Component"
-description: "Configure interactive framing and visualization options for your pre-made artwork and photography."
+description: "Configure interactive framing and visualisation options for your pre-made artwork and photography."
 ---
 
 ## What is the Artwork Component?
 
-The Artwork Component is designed for **artists and photographers** who sell ready-made artwork and want to offer customers interactive customization — including size selection, frame styles, and mat options — with a live preview that updates in real time.
+The Artwork Component lets you offer customers a **live, interactive framing experience** on your product page. Customers can select size, frame style, and mat options — and see the artwork update in real time before they buy.
+
+<CardGroup cols={3}>
+  <Card title="Who is it for?" icon="user">
+    Artists and photographers selling **pre-made artwork**. Your images are fixed — customers choose how to frame them.
+  </Card>
+  <Card title="What customers see" icon="eye">
+    A live product preview that updates instantly as they pick sizes, frames, and mat colours.
+  </Card>
+  <Card title="What you control" icon="settings">
+    Sizes, frame styles, mat options, pricing rules, and which combinations are available.
+  </Card>
+</CardGroup>
 
 <Info>
-  The Artwork Component works with your existing artwork images. Customers cannot upload their own images here. For customer uploads, see the [Upload Component](/livevue/upload-component).
+  The Artwork Component uses your existing artwork images. Customers cannot upload their own photos here. For customer uploads, see the [Upload Component](/livevue/upload-component).
 </Info>
 
-![Customer-facing artwork product page showing live size, frame, and mat selection](/images/artwork/product-preview.png)
+Here is what the finished experience looks like on your store:
+
+![Customer-facing artwork product page showing live frame and mat selection](/images/artwork/product-preview.png)
 
 ---
 
 ## Accessing the Artwork Component
 
+![LIVEARf dashboard — navigate to Components](/images/artwork/dashboard.png)
+
 1. Open the **LIVEARf app** from your Shopify admin
-2. Navigate to **Components** in the left-hand menu
+2. In the left sidebar, click **Components**
 3. Select an existing **Artwork Component** or click **Create My Own**
 4. Open the **Basic Configuration** tab
 
-![LIVEARf app dashboard showing the Components menu and Create Components button](/images/artwork/dashboard.png)
-
 You will see two panels side by side:
-- **Left panel** — your configuration settings
+- **Left panel** — all your configuration settings
 - **Right panel** — a live **Preview Product** that updates as you make changes
+
+<Tip>
+  Always keep an eye on the Preview Product panel on the right as you configure. It reflects every change you make in real time so you can catch mistakes before saving.
+</Tip>
 
 ---
 
 ## Component Header Settings
 
-At the top of the configuration screen, three key settings control the component's basic behaviour.
+At the very top of the configuration screen you will find three key settings that control the component's basic behaviour.
 
-![Component header showing Component Name field, Image Upload toggle, Quick Setup Guide button, and Component Status toggle](/images/artwork/component-header.png)
+![Component header showing Component Name, Image Upload toggle, and Component Status](/images/artwork/component-header.png)
 
-<ParamField path="Component Name" type="string" required>
-  An internal label used to identify this component. This name is not shown to customers on your storefront.
-</ParamField>
-
-<ParamField path="Image Upload" type="toggle">
-  Enables or disables image upload on the product page. For the Artwork Component this is typically **disabled**, since your artwork images are pre-defined.
-</ParamField>
-
-<ParamField path="Component Status" type="toggle" required>
-  Turn **ON** to activate the component and make it available to link to products. Turn **OFF** to temporarily disable it without deleting it.
-</ParamField>
+| Setting | What it does |
+|---|---|
+| **Component Name** | Internal label to identify this component. Never shown to customers. |
+| **Image Upload** | Toggle to enable or disable image upload. For Artwork Components keep this **OFF** — your artwork is pre-defined. |
+| **Component Status** | Toggle **ON** to make the component active and available to link to products. Toggle **OFF** to pause it without deleting. |
 
 <Warning>
-  Always click **Save** after making any changes. Unsaved changes are lost if you navigate away.
+  Always click **Save** in the top-right corner after making any changes. If you navigate away without saving, all unsaved changes will be lost.
 </Warning>
 
 ---
 
 ## Options Panel
 
-The Options panel controls every customization choice your customers will see on the product page.
+The Options panel is where you define every customisation choice your customers will see on the product page.
 
-![Options panel listing Shopify Options 1–3 alongside custom Frames, Mat Size, and Mat Colour options](/images/artwork/options-list.png)
+![Options panel showing Shopify Options and custom LIVEARf options list](/images/artwork/options-list.png)
 
-### Shopify Options (inherited)
+<Tabs>
+  <Tab title="Shopify Options">
+    The first three options in the list are **automatically inherited from your Shopify product variants**. They represent your existing product options such as Size.
 
-The first three options are automatically pulled in from your Shopify product variants. These represent your existing Shopify product options (e.g. Size).
+    - Use the **eye icon** next to each option to show or hide it on the storefront
+    - Hidden options do not appear in the Preview Product panel
+    - You cannot delete these — they come directly from your Shopify product
 
-- Use the **eye icon** to show or hide each option on the storefront
-- Hidden options will not appear in the live Preview Product panel
+    <Note>
+      If your Shopify product has no variants set up, these three slots will appear empty. Set up your product variants in Shopify first before configuring here.
+    </Note>
+  </Tab>
+  <Tab title="Custom Options (LIVEARf)">
+    LIVEARf automatically creates three custom options for you:
 
-### Custom Options (LIVEARf)
+    | Option | Purpose |
+    |---|---|
+    | **Frames** | Frame style selection shown as visual swatches |
+    | **Mat Size** | Controls the spacing between the artwork and the frame |
+    | **Mat Colour** | Controls the colour of the mat border |
 
-LIVEARf adds three custom options by default:
-
-| Option | Purpose |
-|---|---|
-| **Frames** | Frame style selection with visual swatches |
-| **Mat Size** | Controls the spacing between the artwork and the frame |
-| **Mat Colour** | Controls the colour of the mat border |
-
-Each custom option can be **edited**, **duplicated**, or **deleted** at any time.
+    Each custom option can be:
+    - **Edited** — click the option name to open its configuration
+    - **Duplicated** — copy it with all settings intact
+    - **Deleted** — remove it permanently from this component
+  </Tab>
+</Tabs>
 
 ---
 
 ## Configuring an Option
 
-Every option — whether Shopify-inherited or custom — follows the same configuration steps.
+Every option — whether Shopify-inherited or custom — follows the same configuration steps. Click any option in the list on the left to open its settings.
 
-<Steps>
+### Step 1 — Option Name and Label
 
-  <Step title="Select the option">
-    Click on the option name (e.g. **Frames**) from the options list on the left.
-  </Step>
+![Option Name (red box) vs Option Label (green box) — showing internal vs customer-facing fields](/images/artwork/option-name-label.png)
 
-  <Step title="Define option details">
-    | Field | Description |
-    |---|---|
-    | **Option Name** | Internal reference only — not shown to customers |
-    | **Option Label** | The label displayed to customers on the product page |
-    | **Hide Option** | Toggle to control visibility on the storefront |
+| Field | What it does | Visible to customers? |
+|---|---|---|
+| **Option Name** | Internal reference used to identify the option in rules and config | No |
+| **Option Label** | The text customers see above the option on the product page | Yes |
+| **Hide** toggle | Hides the option entirely from the storefront | — |
 
-    ![Option Name (internal, red box) versus Option Label (customer-facing, green box) for the Frames option](/images/artwork/option-name-label.png)
-  </Step>
-
-  <Step title="Choose an option type">
-    Select how customers will interact with this option:
-
-    | Type | Best used for |
-    |---|---|
-    | **Swatch** | Frame images or mat colour thumbnails |
-    | **Rectangle** | Size options (e.g. 10×10, 20×20) |
-    | **Radio Button** | Single-choice text selections |
-    | **Dropdown** | Long lists of choices |
-    | **Number** | Custom size inputs |
-    | **Colour** | Colour picker for mat colours |
-
-    ![Option type dropdown open showing all six available types: Swatch, Rectangle, Radio Button, Number, Colour, Dropdown](/images/artwork/option-type-dropdown.png)
-
-    The Preview Product updates instantly when you change the option type.
-  </Step>
-
-  <Step title="Assign a Section">
-    The Section determines how the option behaves visually on the product page.
-
-    | Section | Purpose |
-    |---|---|
-    | **Frame** | Frame visualization and styles |
-    | **Mat** | Mat appearance (visual only) |
-    | **Canvas** | Canvas wrap rendering styles |
-    | **Acrylic** | Acrylic mounting styles |
-    | **Metal** | Metal print styles |
-    | **Wood** | Wood-based finishes |
-    | **Custom Size** | Custom width and height input |
-    | **Custom Mat Size** | Custom mat spacing |
-    | **Pricing** | Pricing adjustments |
-    | **Additional** | Optional add-ons |
-    | **None** | No special behaviour |
-
-    ![Section dropdown open showing all available section types including Frame, Mat, Canvas, Acrylic, Metal, Wood, Additional, Pricing, Units, None](/images/artwork/section-dropdown.png)
-
-    **Section = Frame** — unlocks frame thumbnail columns (Main + Thumb) in the option values panel:
-
-    ![Section set to Frame, showing option values Gold, White, Black, Wood with Main and Thumb image columns](/images/artwork/section-frame.png)
-
-    **Section = Mat** — shows an Image swatch column for each mat value:
-
-    ![Section set to Mat, showing option values with the Image column for uploading mat colour swatches](/images/artwork/section-mat.png)
-  </Step>
-
-  <Step title="Configure option values">
-    Option values are the individual choices available to customers (e.g. Gold, White, Wood, Black for Frames).
-
-    For each value you can:
-    - Set a **label** (shown to customers)
-    - Upload or select a **thumbnail image**
-    - Mark one value as the **default selection**
-    - **Duplicate** or **delete** the value
-
-    All values appear visually in the Preview Product panel on the right.
-  </Step>
-
-</Steps>
+<Tip>
+  You can set the Option Name and Option Label to the same value (e.g. both "Frames") — just remember the Name is your internal reference and the Label is what shoppers read.
+</Tip>
 
 ---
 
-## Actions (Section-Specific)
+### Step 2 — Choose an Option Type
 
-Some sections unlock an **Action** dropdown for each option value, giving you control over how that value renders visually.
+The Option Type controls how customers interact with this option on the product page.
 
-![Action dropdown for the Frame section showing Standard Frame, Infinity Frame, and Floater Frame options](/images/artwork/action-dropdown.png)
+![Option Type dropdown showing all 6 available types](/images/artwork/option-type-dropdown.png)
+
+| Type | Best used for | Example |
+|---|---|---|
+| **Swatch** | Frame images or mat colour thumbnails | Frame styles (Gold, White, Wood) |
+| **Rectangle** | Size options shown as buttons | 10×10, 20×20, 30×30 |
+| **Radio Button** | Single-choice text selections | Orientation (Portrait, Landscape) |
+| **Dropdown** | Long lists of choices | 10+ size options |
+| **Number** | Custom numeric input | Custom width or height in cm |
+| **Colour** | Colour picker | Mat colour selection |
+
+<Note>
+  The Preview Product on the right updates instantly when you change the Option Type. Use this to see exactly how it will look to customers before committing.
+</Note>
+
+---
+
+### Step 3 — Assign a Section
+
+The Section tells LIVEVUE what type of content this option represents. It controls how the option renders visually and which Actions become available.
+
+![Section dropdown showing all available section types](/images/artwork/section-dropdown.png)
+
+| Section | Purpose |
+|---|---|
+| **Frame** | Frame border visualisation and styles |
+| **Mat** | Mat appearance around the artwork (visual only) |
+| **Canvas** | Canvas wrap rendering — how edges are handled |
+| **Acrylic** | Acrylic mounting style options |
+| **Metal** | Metal print style options |
+| **Wood** | Wood-based finish options |
+| **Custom Size** | Enables custom width and height input fields |
+| **Custom Mat Size** | Enables custom mat spacing input |
+| **Pricing** | Adds a pricing adjustment to this option |
+| **Additional** | Optional add-ons (e.g. hanging kit, certificate) |
+| **None** | No special visual behaviour |
+
+**Example — Frame section:**
+
+![Frame section selected — shows frame border wrapping around the artwork in preview](/images/artwork/section-frame.png)
+
+**Example — Mat section:**
+
+![Mat section selected — shows mat spacing applied around the artwork in preview](/images/artwork/section-mat.png)
+
+---
+
+### Step 4 — Configure Actions
+
+Some sections unlock an **Action** dropdown for each option value. Actions define the specific rendering behaviour for that value.
+
+![Action dropdown showing frame-specific actions like Standard Frame, Infinity Frame, Floater Frame](/images/artwork/action-dropdown.png)
 
 | Section | Available Actions |
 |---|---|
@@ -178,125 +189,259 @@ Some sections unlock an **Action** dropdown for each option value, giving you co
 | **Pricing** | Discount, Margin, Markup |
 
 <Note>
-  If a section does not support actions (such as **Mat**), the Action dropdown is greyed out and disabled automatically.
+  Sections like **Mat** do not support Actions — the Action dropdown will be greyed out automatically. This is expected behaviour.
 </Note>
+
+---
+
+### Step 5 — Add Option Values
+
+Option values are the individual choices available to customers — for example, Gold, White, Wood, and Black for the Frames option.
+
+For each value you can:
+- Set a **Label** (the text customers see)
+- Upload a **Main image** (full frame image for visualisation) and a **Thumbnail** (small swatch shown in selector)
+- Mark one value as the **Default** selection
+- Set a **Price** for this specific value
+- **Duplicate** or **Delete** the value
+
+All values appear visually in the Preview Product panel on the right as you add them.
 
 ---
 
 ## Mat Size Configuration
 
-The Mat Size option controls the spacing between the artwork edge and the inner frame edge. It supports both **single mat** and **double mat** configurations.
+The Mat Size option controls the spacing between the artwork edge and the inner frame edge.
 
-![Mat Size option showing Option Name = Mat Size, Section = Mat, Action = First Mat Size, with values 2 inch, 1 inch, No Mat](/images/artwork/mat-size-config.png)
+![Mat Size option — showing option name, action dropdown, and 3 size values](/images/artwork/mat-size-config.png)
 
-Each mat level has three sub-settings:
+LIVEVUE supports both **single mat** and **double mat** configurations. Each mat layer has its own three sub-settings:
 
-| Sub-option | Purpose |
+![Mat Size action dropdown showing First Mat Size, First Mat Style, First Mat Colour, Second Mat options](/images/artwork/mat-size-actions.png)
+
+| Sub-setting | Purpose |
 |---|---|
-| **Mat Size** | The width of the mat border |
-| **Mat Style** | The visual style applied |
-| **Mat Colour** | The colour of the mat |
+| **First Mat Size** | Width of the primary mat border |
+| **First Mat Style** | Visual style of the primary mat |
+| **First Mat Colour** | Colour of the primary mat |
+| **Second Mat Size** | Width of the secondary (inner) mat border |
+| **Second Mat Style** | Visual style of the secondary mat |
+| **Second Mat Colour** | Colour of the secondary mat |
 
-![Mat Action dropdown showing First Mat Size, First Mat Style, First Mat Colour, Second Mat Size, Second Mat Style, Second Mat Colour](/images/artwork/mat-size-actions.png)
+<Tip>
+  To use a single mat only, configure just the First Mat settings and leave the Second Mat values at zero or hide them using a Conditional Rule.
+</Tip>
 
-This applies independently to both the **First Mat** and **Second Mat** layers.
-
-Mat Size supports all pricing methods. Use the **edit icon** on the right of each value to configure pricing for that specific mat size.
+Mat Size supports all pricing methods. Click the **edit icon** on the right of any value to set its price.
 
 ---
 
 ## Mat Colour Configuration
 
-The Mat Colour option controls the visual colour of the mat layer. It shares the same six mat action types as Mat Size and supports all pricing methods.
+The Mat Colour option controls the visual colour of the mat layer shown in the preview.
 
-![Mat Colour option showing Option Name = Mat Colour, Section = Mat, Action = First Mat Style, with Black and White swatch values](/images/artwork/mat-colour-config.png)
+![Mat Colour option — showing swatch type with Black and White values configured](/images/artwork/mat-colour-config.png)
 
-Use the **image icon** on each value to visually select or upload mat colour swatches. Changes are reflected immediately in the Preview Product panel.
+- Uses the same six mat action sub-settings as Mat Size
+- Supports all pricing methods
+- Use the **image icon** on each value to upload or select a mat colour swatch
+- Changes reflect immediately in the Preview Product panel
 
 ---
 
 ## Pricing Configuration
 
-Each option value can have a price applied to it. LIVEVUE supports four pricing methods:
+Every option value can have a price attached to it. LIVEVUE supports four pricing methods — choose the one that matches how you charge for each option.
 
-| Method | How it works |
-|---|---|
-| **Fixed Price** | A flat amount added regardless of size |
-| **Predefined Price** | A specific price per defined value (e.g. per size variant) |
-| **Surface Area** | Price calculated based on width × depth |
-| **Perimeter** | Price calculated based on the edge measurement |
+![Pricing configuration — showing Price Type dropdown highlighted with option values and prices](/images/artwork/pricing-config.png)
 
-![Price Type dropdown showing all available pricing methods: Fixed Price, Surface Area, and Predefined Pricing variants](/images/artwork/pricing-config.png)
+![Standard Pricing dropdown — showing Fixed Price, Surface Area, Perimeter, Linear Unit options](/images/artwork/standard-pricing.png)
 
-![Fixed Price (Standard) selected as the Price Type, with the pricing edit icon highlighted on an option value row](/images/artwork/standard-pricing.png)
+| Pricing Method | How it works | Best for |
+|---|---|---|
+| **Fixed Price (Standard)** | A flat amount added per selection | Frame styles, mat colours |
+| **Surface Area (Standard)** | Price × width × height of the artwork | Canvas, metal, acrylic prints |
+| **Perimeter (Standard)** | Price × total edge length | Frame moulding priced per linear inch |
+| **Linear Unit (Standard)** | Price per unit of one dimension | Mat border width |
+| **Fixed Price (Predefined)** | Different flat price per size variant | Size-specific pricing |
+| **Surface Area (Predefined)** | Surface area calculation per size | Size-dependent print pricing |
+| **Perimeter (Predefined)** | Perimeter calculation per size | Size-dependent frame pricing |
+| **Linear Unit (Predefined)** | Linear unit per size | Size-dependent mat pricing |
 
-All pricing methods support a **Tooltip** (short explanation shown on hover) and a **Description** (longer explanation). Use the **(i) icon** for a visual measurement guide.
+<Info>
+  **Standard** pricing calculates based on the actual artwork dimensions. **Predefined** pricing lets you set a specific price for each size variant manually — useful when your prices don't follow a simple formula.
+</Info>
+
+All pricing methods support:
+- **Tooltip** — a short explanation shown to customers on hover
+- **Description** — a longer explanation shown below the option
+- Use the **(i) icon** next to Frame Profile fields for a visual measurement guide
 
 ---
 
 ## Advanced Configuration — Conditional Rules
 
-Conditional rules let you dynamically show, hide, or disable options based on what a customer has already selected. This keeps the product page clean and relevant.
+Conditional Rules are the most powerful feature in the Artwork Component. They let you **automatically show, hide, or disable options** based on what a customer has already selected — keeping your product page clean and preventing invalid combinations.
+
+![Conditional Rules panel in Advanced Configuration tab](/images/artwork/conditional-rules.png)
+
+### How to access
+
+1. Click the **Advanced Configuration** tab at the top of the component
+2. Expand the **Conditional Rules** section
+3. Click **Add New Rule** to create your first rule
+
+---
 
 ### How rules work
 
-Each rule follows simple **IF → THEN** logic:
+Every rule follows a simple three-part logic:
 
-- **WHEN** — the option that triggers the rule (e.g. Frames)
-- **IS** — the condition (Equals to, Not equals to, Greater than, Less than)
-- **THEN** — the action to take (Show, Hide, or StrikeOut) on a target option
+```
+WHEN  [Option]  [Condition]  [Value]
+THEN  [Action]  [Target Option]  [Target Values]
+```
 
-### Setting up a rule
+| Part | What you set | Options available |
+|---|---|---|
+| **WHEN** | Which option triggers the rule | Frames, Mat Size, Mat Colour, or any custom option |
+| **Condition** | How to evaluate it | Equals to, Not equals to, Greater than, Less than |
+| **Value** | What value triggers it | Any, or specific values (e.g. Black, Gold, 2 inch) |
+| **THEN Action** | What happens | Show, Hide, StrikeOut |
+| **Target** | Which option is affected | Frames, Mat Colour, or any custom option |
+| **Target Values** | Which values are affected | All values, or specific ones |
 
-1. Open the **Advanced Configuration** tab
-2. Expand the **Conditional Rules** section
-3. Click **Add New Rule**
-4. Configure the WHEN / IS / THEN fields
-5. Click **Sync** to apply
+---
 
-![Conditional Rules panel showing When / is / then dropdown fields, operator selector, and Add New Rule button](/images/artwork/conditional-rules.png)
+### Actions explained
+
+| Action | What it does | When to use it |
+|---|---|---|
+| **Show** | Makes a hidden option or value visible | Reveal options only when relevant |
+| **Hide** | Completely removes an option or value from view | Remove irrelevant combinations |
+| **StrikeOut** | Keeps the value visible but crossed out and unselectable | Show customers it exists but is unavailable with their current selection |
+
+---
 
 ### Example rules
 
 <AccordionGroup>
-  <Accordion title="Hide Mat Colour when Black frame is selected">
-    **When** Frames **equals** Black → **Hide** Mat Colour
+
+  <Accordion title="Example 1 — Hide Mat Colour when Black frame is selected">
+    **The scenario:** Your Black frame looks best without a mat. You want to hide the Mat Colour option entirely when a customer selects the Black frame.
+
+    **The rule:**
+    ```
+    WHEN  Frames  equals  Black
+    THEN  Hide  Mat Colour  (all values)
+    ```
+
+    **Result:** As soon as a customer clicks the Black frame swatch, the Mat Colour selector disappears from the page automatically. If they switch to another frame, it reappears.
   </Accordion>
-  <Accordion title="Show specific frames when mat size is 2 inch">
-    **When** Mat Size **equals** 2 inch → **Show** Frames (Gold, White)
+
+  <Accordion title="Example 2 — StrikeOut unavailable frames for large sizes">
+    **The scenario:** Your Floater Frame is only available up to 20×20. For larger sizes you want to show it but make it clear it cannot be selected.
+
+    **The rule:**
+    ```
+    WHEN  Size  greater than  20×20
+    THEN  StrikeOut  Frames  (Floater Frame only)
+    ```
+
+    **Result:** On sizes 30×30 and above, the Floater Frame swatch shows with a strikethrough. Customers can see it exists but cannot select it — reducing confusion and support queries.
   </Accordion>
-  <Accordion title="StrikeOut Black frame when Wood is selected">
-    **When** Frames **equals** Wood → **StrikeOut** Black Frame
+
+  <Accordion title="Example 3 — Show Gold and White frames only when 2 inch mat is selected">
+    **The scenario:** Your Gold and White frames only look right with a 2 inch mat. You want to show only those frames when a customer picks that mat size.
+
+    **The rule:**
+    ```
+    WHEN  Mat Size  equals  2 inch
+    THEN  Show  Frames  (Gold, White only)
+    ```
+
+    **Result:** When a customer selects the 2 inch mat, only Gold and White frame options appear. All other frames are hidden for that combination.
   </Accordion>
+
+  <Accordion title="Example 4 — Hide Second Mat options when No Mat is selected">
+    **The scenario:** You offer a double mat option but when a customer selects No Mat, the Second Mat Size and Second Mat Colour options are irrelevant and cluttering the page.
+
+    **The rule:**
+    ```
+    WHEN  Mat Size  equals  No Mat
+    THEN  Hide  Mat Colour  (all values)
+    ```
+
+    Add a second rule:
+    ```
+    WHEN  Mat Size  equals  No Mat
+    THEN  Hide  Second Mat Size  (all values)
+    ```
+
+    **Result:** Selecting No Mat instantly cleans up the product page by removing all secondary mat options.
+  </Accordion>
+
+  <Accordion title="Example 5 — Show canvas-only options for Canvas section">
+    **The scenario:** You offer both framed prints and canvas prints. Wrap style options (Classic Wrap, Mirror Wrap) only apply to canvas. You want these hidden unless the customer is viewing a canvas product.
+
+    **The rule:**
+    ```
+    WHEN  Frames  equals  Canvas (your canvas option value)
+    THEN  Show  Wrap Style  (all values)
+    ```
+
+    **Result:** The Wrap Style option only appears when the customer selects the Canvas frame option — keeping framed product pages clean.
+  </Accordion>
+
 </AccordionGroup>
 
-<Tip>
-  Rules are applied in the order they are listed. You can duplicate rules for reuse and add multiple conditions using operators. Always click **Sync** after updating rules, then test in the Preview Product panel.
-</Tip>
+---
+
+### Managing rules
+
+<Info>
+  **Rules run in order from top to bottom.** If two rules conflict, the one listed lower in the list wins. Drag rules to reorder them.
+</Info>
+
+- **Duplicate** a rule to reuse its structure with minor changes — saves time when building similar rules
+- **Delete** any rule you no longer need
+- **Add multiple conditions** to a single rule using the Operator field (AND / OR)
+- Always click **Sync** after creating or editing rules
+- Use the **Preview Product** panel to test every rule before saving
+
+<Warning>
+  Rules only apply when the component is active and linked to a product. Always test in the Preview Product panel first — not on your live store.
+</Warning>
 
 ---
 
 ## Preview & Saving
 
-Before saving your component, use the **Preview Product** panel on the right to:
+Before saving, always use the **Preview Product** panel on the right to verify everything is correct.
 
-- Test different combinations of size, frame, and mat
-- Verify pricing is calculating correctly
-- Confirm conditional rules are triggering as expected
+![Preview Product panel highlighted — showing live size, frame, and mat selection](/images/artwork/preview-validation.png)
 
-![Preview Product panel highlighted on the right side of the component editor, showing live frame and size selection](/images/artwork/preview-validation.png)
+Check the following before clicking Save:
+- All option types display correctly (swatches, rectangles, dropdowns)
+- Prices are calculating as expected for each combination
+- Conditional rules are triggering — options show, hide, and strikeout correctly
+- The live artwork preview updates properly with each selection
 
-When everything looks correct, click **Save** in the top-right corner.
+When everything looks right, click **Save** in the top-right corner.
+
+<Check>
+  Saved successfully? Your component is ready to link to products.
+</Check>
 
 ---
 
 ## Linking the Component to Products
 
-Once saved, the component must be linked to products before customers can see it.
+A saved component is not visible to customers until it is linked to one or more products.
 
 <Steps>
   <Step title="Enable the component">
-    Make sure **Component Status** is turned **ON** and all changes are saved. The **Link** button only appears after the component is enabled.
+    Make sure **Component Status** is turned **ON** and all changes are saved. The **Link** button only becomes available once the component is enabled.
   </Step>
   <Step title="Open the Link panel">
     Click **Link** in the top-right corner of the component configuration screen.
@@ -304,14 +449,14 @@ Once saved, the component must be linked to products before customers can see it
   <Step title="Choose how to apply it">
     | Option | What it does |
     |---|---|
-    | **Selected Collections** | Applies to all products within chosen Shopify collections |
-    | **Selected Products** | Applies only to individually chosen products |
+    | **Selected Collections** | Applies to all products in the chosen Shopify collections |
+    | **Selected Products** | Applies only to the products you individually select |
     | **All Products (LIVEVUE Template Enabled)** | Applies to every product already using a LIVEVUE template |
 
     Click **Link** to confirm.
   </Step>
   <Step title="Verify the link">
-    Go to **LIVEARf → Components**. You will see the component listed with the number of linked products and a status of **Active**.
+    Go to **LIVEARf → Components**. You will see your component listed with the number of linked products and a status of **Active**.
   </Step>
 </Steps>
 
@@ -321,9 +466,9 @@ Once saved, the component must be linked to products before customers can see it
 
 <CardGroup cols={2}>
   <Card title="Upload Component" icon="upload" href="/livevue/upload-component">
-    Enable customer image uploads for print-on-demand and custom framing.
+    Let customers upload their own photos and visualise them with your frames.
   </Card>
   <Card title="Frame Generator" icon="frame" href="/livevue/frame-generator">
-    Create 2D and 3D frame visuals from your frame strip images.
+    Create 2D and 3D frame visuals from your own frame strip images.
   </Card>
 </CardGroup>
