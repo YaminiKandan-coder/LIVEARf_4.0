@@ -1,30 +1,23 @@
 ---
 title: "Artwork Component"
-sidebarTitle: "Artwork Component"
-description: "Configure interactive framing and visualisation options for your pre-made artwork and photography."
+description: "Configure interactive framing and visualization options for your pre-made artwork and photography."
 ---
 
 ## What is the Artwork Component?
 
-The Artwork Component lets you offer customers a **live, interactive framing experience** directly on your product page. They can select size, frame style, and mat options — and see the artwork update in real time before buying.
+The Artwork Component gives customers a **live framing experience** on your product page. They pick size, frame, and mat — the preview updates instantly. No redirects, no separate tool.
 
-<CardGroup cols={3}>
-  <Card title="Who is it for?" icon="user">
-    Artists and photographers selling pre-made artwork. Your images are fixed — customers choose how to frame them.
-  </Card>
-  <Card title="What customers see" icon="eye">
-    A live product preview that updates instantly as they pick sizes, frames, and mat colours.
-  </Card>
-  <Card title="What you control" icon="settings">
-    Sizes, frame styles, mat options, pricing rules, and which combinations are available.
-  </Card>
-</CardGroup>
+| Best for | Customer experience | You configure |
+| --- | --- | --- |
+| Artists & photographers with pre-made artwork | Live size, frame & mat preview before buying | Options, pricing rules & smart visibility logic |
 
 <Info>
-  Customers cannot upload their own photos in the Artwork Component. For customer uploads, see the [Upload Component](/livevue/upload-component).
+  The Artwork Component uses **your existing artwork images**. Customers cannot upload their own photos here. If you need customer uploads, use the [Upload Component](/livevue/upload-component) instead.
 </Info>
 
-![Customer-facing artwork product page showing live frame and mat selection](/images/artwork/product-preview.png)
+**Here is what it looks like on your live store:**
+
+![Customer-facing product page — artwork shown with size, frame, and mat selectors on the right](/images/artwork/product-preview.png)
 
 ---
 
@@ -50,7 +43,7 @@ You will see two panels side by side — the **configuration panel** on the left
 ![Component header — Component Name, Image Upload toggle, Quick Setup Guide, and Component Status](/images/artwork/component-header.png)
 
 | Setting | What it does | Shown to customers? |
-|---|---|---|
+| --- | --- | --- |
 | **Component Name** | Internal label to identify this component | No |
 | **Image Upload** | Enables customer image upload. Keep **OFF** for Artwork Components — artwork is pre-defined | No |
 | **Component Status** | **ON** = active and linkable to products. **OFF** = paused without deleting | No |
@@ -81,7 +74,7 @@ You will see two panels side by side — the **configuration panel** on the left
     LIVEARf creates three custom options by default:
 
     | Option | Purpose |
-    |---|---|
+    | --- | --- |
     | **Frames** | Frame style selection shown as visual swatches |
     | **Mat Size** | Spacing between the artwork and the frame |
     | **Mat Colour** | Colour of the mat border |
@@ -101,7 +94,7 @@ Click any option name in the list on the left to open its settings. Every option
 ![Option Name field (red, internal) and Option Label field (green, customer-facing)](/images/artwork/option-name-label.png)
 
 | Field | Purpose | Shown to customers? |
-|---|---|---|
+| --- | --- | --- |
 | **Option Name** | Internal reference used in rules and config | No |
 | **Option Label** | Text customers see above the option | Yes |
 | **Hide toggle** | Hides the option from the storefront entirely | — |
@@ -113,7 +106,7 @@ Click any option name in the list on the left to open its settings. Every option
 ![Option Type dropdown — showing Swatch, Rectangle, Radio Button, Number, Colour, Dropdown](/images/artwork/option-type-dropdown.png)
 
 | Type | Best used for |
-|---|---|
+| --- | --- |
 | **Swatch** | Frame images or mat colour thumbnails |
 | **Rectangle** | Size options shown as pill buttons |
 | **Radio Button** | Single-choice text selections |
@@ -130,7 +123,7 @@ The Section tells LIVEVUE what this option represents and controls how it render
 ![Section dropdown — showing Frame, Mat, Canvas, Acrylic, Metal, Wood, Pricing, Additional, None](/images/artwork/section-dropdown.png)
 
 | Section | Purpose |
-|---|---|
+| --- | --- |
 | **Frame** | Frame border visualisation and styles |
 | **Mat** | Mat appearance around the artwork |
 | **Canvas** | Canvas wrap rendering styles |
@@ -156,7 +149,7 @@ Some sections unlock an **Action** dropdown that defines how each value renders 
 ![Action dropdown — showing Standard Frame, Infinity Frame, Floater Frame for the Frame section](/images/artwork/action-dropdown.png)
 
 | Section | Available Actions |
-|---|---|
+| --- | --- |
 | **Frame** | Standard Frame, Infinity Frame, Floater Frame |
 | **Canvas** | Classic Wrap, Mirror, Colour, Blur |
 | **Acrylic** | Spacers, Mount, Sandwich |
@@ -175,6 +168,7 @@ Some sections unlock an **Action** dropdown that defines how each value renders 
 Option values are the individual choices customers see — for example Gold, White, Wood, Black for Frames.
 
 For each value you can:
+
 - Set a **Label** (text customers see)
 - Upload a **Main image** (used in the live visualisation) and a **Thumbnail** (shown in the selector)
 - Set one value as the **Default**
@@ -186,9 +180,7 @@ For each value you can:
 ## Mat, Pricing & Advanced Configuration
 
 <Tabs>
-
   <Tab title="Mat Size & Colour">
-
     ### Mat Size
 
     Controls the spacing between the artwork edge and the frame. Supports **single mat** and **double mat** configurations.
@@ -198,7 +190,7 @@ For each value you can:
     ![Mat Size action dropdown — First Mat Size, First Mat Style, First Mat Colour, Second Mat Size, Second Mat Style, Second Mat Colour](/images/artwork/mat-size-actions.png)
 
     | Sub-setting | Purpose |
-    |---|---|
+    | --- | --- |
     | **First Mat Size** | Width of the primary mat border |
     | **First Mat Style** | Visual style of the primary mat |
     | **First Mat Colour** | Colour of the primary mat |
@@ -224,11 +216,8 @@ For each value you can:
     - Supports all pricing methods
     - Use the **image icon** on each value to upload a colour swatch
     - Changes reflect immediately in the Preview Product panel
-
   </Tab>
-
   <Tab title="Pricing">
-
     ### Pricing Methods
 
     Every option value can have a price attached. LIVEVUE supports eight methods across two categories.
@@ -240,7 +229,7 @@ For each value you can:
     **Standard Pricing** — calculates automatically based on actual artwork dimensions:
 
     | Method | How it calculates | Best for |
-    |---|---|---|
+    | --- | --- | --- |
     | **Fixed Price** | Flat amount per selection | Frame styles, mat colours |
     | **Surface Area** | Price × width × height | Canvas, metal, acrylic prints |
     | **Perimeter** | Price × total edge length | Frame moulding per linear inch |
@@ -249,7 +238,7 @@ For each value you can:
     **Predefined Pricing** — you manually set a price for each size variant:
 
     | Method | How it calculates | Best for |
-    |---|---|---|
+    | --- | --- | --- |
     | **Fixed Price (Predefined)** | Different flat price per size | Irregular pricing per size |
     | **Surface Area (Predefined)** | Surface area per size | Custom price per size |
     | **Perimeter (Predefined)** | Perimeter per size | Size-dependent frame pricing |
@@ -266,16 +255,13 @@ For each value you can:
     All pricing methods support two optional customer-facing fields:
 
     | Field | Where it appears | Purpose |
-    |---|---|---|
+    | --- | --- | --- |
     | **Tooltip** | On hover over the option label | Short note, e.g. "Price varies by size" |
     | **Description** | Below the option on the product page | Longer explanation of what is included |
 
     {/* [ gap — screenshot of Tooltip and Description fields ] */}
-
   </Tab>
-
   <Tab title="Advanced Config — Rules">
-
     ### What are Conditional Rules?
 
     Conditional Rules automatically **show, hide, or disable options** based on what a customer has already selected. They keep your product page clean and prevent invalid combinations.
@@ -292,13 +278,13 @@ For each value you can:
 
     ### Rule structure
 
-    ```
+    ```text
     WHEN  [Option]  [Condition]  [Value]
     THEN  [Action]  [Target Option]  [Target Values]
     ```
 
     | Part | What you set | Options |
-    |---|---|---|
+    | --- | --- | --- |
     | **WHEN Option** | Which option triggers the rule | Frames, Mat Size, Mat Colour, any custom option |
     | **Condition** | How to evaluate it | Equals to, Not equals to, Greater than, Less than |
     | **Value** | What value triggers it | Any, or specific values |
@@ -313,7 +299,7 @@ For each value you can:
     {/* [ gap — screenshot showing Show / Hide / StrikeOut visually on the product page ] */}
 
     | Action | What it does | When to use |
-    |---|---|---|
+    | --- | --- | --- |
     | **Show** | Makes a hidden option or value visible | Reveal options only when relevant |
     | **Hide** | Removes an option or value from the page entirely | Remove irrelevant combinations |
     | **StrikeOut** | Keeps value visible but crossed out and unselectable | Show it exists but is unavailable |
@@ -327,12 +313,12 @@ For each value you can:
     ### Examples
 
     <AccordionGroup>
-
       <Accordion title="Example 1 — Hide Mat Colour when Black frame is selected">
         **Scenario:** Your Black frame looks best without a mat. Showing Mat Colour when Black is selected causes confusion.
 
         **Rule:**
-        ```
+
+        ```text
         WHEN  Frames  equals  Black
         THEN  Hide  Mat Colour  (all values)
         ```
@@ -346,7 +332,8 @@ For each value you can:
         **Scenario:** Your Floater Frame is only available up to 20×20. For larger sizes, you want to show it exists but prevent selection.
 
         **Rule:**
-        ```
+
+        ```text
         WHEN  Size  greater than  20×20
         THEN  StrikeOut  Frames  (Floater Frame only)
         ```
@@ -360,7 +347,8 @@ For each value you can:
         **Scenario:** Gold and White frames are the only ones that look right with a 2 inch mat. You want to hide all others when that mat size is chosen.
 
         **Rule:**
-        ```
+
+        ```text
         WHEN  Mat Size  equals  2 inch
         THEN  Show  Frames  (Gold, White only)
         ```
@@ -374,13 +362,15 @@ For each value you can:
         **Scenario:** When a customer selects No Mat, Second Mat Size and Mat Colour are irrelevant and clutter the page.
 
         **Rule 1:**
-        ```
+
+        ```text
         WHEN  Mat Size  equals  No Mat
         THEN  Hide  Mat Colour  (all values)
         ```
 
         **Rule 2:**
-        ```
+
+        ```text
         WHEN  Mat Size  equals  No Mat
         THEN  Hide  Second Mat Size  (all values)
         ```
@@ -394,7 +384,8 @@ For each value you can:
         **Scenario:** Wrap Style options only apply to canvas prints. Showing them on framed products creates confusion.
 
         **Rule:**
-        ```
+
+        ```text
         WHEN  Frames  equals  Canvas
         THEN  Show  Wrap Style  (all values)
         ```
@@ -403,7 +394,6 @@ For each value you can:
 
         {/* [ gap — screenshot: Wrap Style visible only when Canvas selected ] */}
       </Accordion>
-
     </AccordionGroup>
 
     ---
@@ -415,7 +405,7 @@ For each value you can:
     </Info>
 
     | Task | How |
-    |---|---|
+    | --- | --- |
     | Reorder | Drag the rule row up or down |
     | Duplicate | Click the duplicate icon to copy a rule |
     | Delete | Click the delete icon |
@@ -426,9 +416,7 @@ For each value you can:
     <Warning>
       Always test rules in the Preview Product panel first. Rules only go live once the component is saved and linked to a product.
     </Warning>
-
   </Tab>
-
 </Tabs>
 
 ---
@@ -464,7 +452,7 @@ Click **Save** in the top-right corner when everything looks correct.
   </Step>
   <Step title="Choose how to apply it">
     | Option | What it does |
-    |---|---|
+    | --- | --- |
     | **Selected Collections** | All products in chosen Shopify collections |
     | **Selected Products** | Only individually chosen products |
     | **All Products (LIVEVUE Template Enabled)** | Every product already using a LIVEVUE template |
@@ -484,6 +472,7 @@ Click **Save** in the top-right corner when everything looks correct.
   <Card title="Upload Component" icon="upload" href="/livevue/upload-component">
     Let customers upload their own photos and visualise them with your frames.
   </Card>
+
   <Card title="Frame Generator" icon="frame" href="/livevue/frame-generator">
     Create 2D and 3D frame visuals from your own frame strip images.
   </Card>
