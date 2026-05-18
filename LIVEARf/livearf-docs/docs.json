@@ -2,11 +2,11 @@
   "name": "LIVEVUE Knowledge Base",
   "theme": "maple",
   "logo": {
-    "light": "/logo.png",
-    "dark": "/logo.png",
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png",
     "href": "https://livearf.com"
   },
-  "favicon": "/logo.png",
+  "favicon": "/logo/light.png",
   "colors": {
     "primary": "#1D9E75",
     "light": "#5DCAA5",
